@@ -168,7 +168,7 @@ const DinnerPlanner = () => {
               <Home className="w-12 h-12 text-white" />
             </div>
             <h1 className="text-3xl font-bold text-white mb-2">今日家でご飯食べる？</h1>
-            <p className="text-slate-400">家族の夕食予定を共有しよう</p>
+            <p className="text-slate-400">家族の夕食予定を共有しよう 🍽️</p>
           </div>
 
           <div className="space-y-4">
