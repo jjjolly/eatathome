@@ -19,7 +19,21 @@
 - **Lucide React**: アイコン
 - **LocalStorage**: データ永続化
 
-## セットアップ
+## デプロイ（最も簡単）
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/jjjolly/eatathome)
+
+上のボタンをクリックするだけで、Vercelに自動デプロイされます。
+
+### 手動でデプロイする場合
+
+1. [Vercel](https://vercel.com) にアクセス
+2. GitHubアカウントでログイン
+3. 「New Project」をクリック
+4. このリポジトリ（jjjolly/eatathome）を選択
+5. 「Deploy」をクリック
+
+## ローカル環境でのセットアップ
 
 ```bash
 # 依存関係のインストール
