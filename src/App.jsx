@@ -457,6 +457,32 @@ const DinnerPlanner = () => {
         {/* サマリータブ */}
         {activeTab === 'summary' && (
           <>
+            {/* サマリー切り替えボタン */}
+            <div className="bg-slate-800 rounded-2xl shadow-2xl p-2 mb-4 border border-slate-700">
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setSummaryView('today')}
+                  className={`flex-1 py-2 rounded-lg font-semibold transition-all ${
+                    summaryView === 'today'
+                      ? 'bg-gradient-to-r from-green-500 to-teal-600 text-white shadow-lg'
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                  }`}
+                >
+                  今日
+                </button>
+                <button
+                  onClick={() => setSummaryView('week')}
+                  className={`flex-1 py-2 rounded-lg font-semibold transition-all ${
+                    summaryView === 'week'
+                      ? 'bg-gradient-to-r from-green-500 to-teal-600 text-white shadow-lg'
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                  }`}
+                >
+                  週間
+                </button>
+              </div>
+            </div>
+
             {/* サマリー（今日 or 1週間） */}
             <div
               className="bg-slate-800 rounded-2xl shadow-2xl p-6 mb-6 border border-slate-700 min-h-[400px]"
@@ -480,10 +506,7 @@ const DinnerPlanner = () => {
                 <>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-semibold text-white">今日のサマリー</h3>
-                    <div className="text-right">
-                      <p className="text-sm text-slate-400">{todayFormatted}</p>
-                      <p className="text-xs text-slate-500 mt-1">← スワイプで週間表示</p>
-                    </div>
+                    <p className="text-sm text-slate-400">{todayFormatted}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {/* 家で食べる */}
@@ -588,7 +611,6 @@ const DinnerPlanner = () => {
                 <>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-semibold text-white">週間サマリー</h3>
-                    <p className="text-xs text-slate-500">スワイプで今日表示 →</p>
                   </div>
                   <div className="space-y-3">
                     {weekDays.map((day, index) => (
